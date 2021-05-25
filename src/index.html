@@ -13,10 +13,13 @@
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
 
-    <input type="text" class="js-input" />
-    <ul class="js-country-list"></ul>
+    <label class="js-label">
+      Country
+      <input type="text" class="js-country-input" name="country" />
+    </label>
+    <div class="js-country"></div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
