@@ -1,0 +1,89 @@
+/* COUNTRY */
+
+.country {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 40%;
+  width: 55%;
+  background-color: #fff;
+
+  &__name {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 1.5;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  &__property {
+    margin: 0;
+    padding: 20px;
+  }
+}
+.property {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.property-lang {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.property-value {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.languages-list {
+  margin: 0;
+}
+
+.language-item {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.country-list {
+  margin: 0;
+  padding-left: 50px;
+}
+
+.country-item {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.image {
+  display: inline-block;
+  border-radius: 10px;
+  width: 550px;
+  height: 350px;
+}
