@@ -3,6 +3,10 @@ import countriesListTpl from './templates/countries.hbs';
 import _debounce from 'lodash.debounce';
 import API from './js/api-service';
 import getRefs from './js/get-refs';
+import toastify from './js/toastify';
+
+// import pnotify from './js/toastify';
+
 import './sass/main.scss';
 
 const refs = getRefs();
@@ -13,17 +17,17 @@ function onCountryInput(e) {
   clearCountryInput();
   API.fetchCountryByName(e.target.value)
     .then(country => {
-      if (country.length === 1) {
+      if (country.length < 2) {
         renderCountryCard(country);
+        toastify.onSuccess(country);
       } else if (country.length < 10 && country.length > 1) {
         renderCountriesList(country);
+        toastify.onFetchMore(country);
       } else {
-        // renderCountriesList(country);
-        console.log('Too many matches found. Please enter a more specific query!');
-        // alert('Too many matches found. Please enter a more specific query!');
+        toastify.onFetchMore(country);
       }
     })
-    .catch(onFetchError);
+    .catch(toastify.onFetchError);
 }
 
 function renderCountryCard(country) {
@@ -34,10 +38,6 @@ function renderCountryCard(country) {
 function renderCountriesList(countries) {
   const markup = countriesListTpl(countries);
   refs.country.insertAdjacentHTML('beforeend', markup);
-}
-
-function onFetchError(error) {
-  alert(error);
 }
 
 function clearCountryInput() {
