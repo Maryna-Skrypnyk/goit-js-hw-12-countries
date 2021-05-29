@@ -15,6 +15,9 @@ refs.input.addEventListener('input', _debounce(onCountryInput, 500));
 
 function onCountryInput(e) {
   clearCountryInput();
+  if (!e.target.value) {
+    return;
+  }
   API.fetchCountryByName(e.target.value)
     .then(country => {
       if (country.length < 2) {
@@ -22,7 +25,6 @@ function onCountryInput(e) {
         toastify.onSuccess(country);
       } else if (country.length < 10 && country.length > 1) {
         renderCountriesList(country);
-        toastify.onFetchMore(country);
       } else {
         toastify.onFetchMore(country);
       }

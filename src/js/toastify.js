@@ -16,9 +16,8 @@ function onSuccess(success) {
     duration: 2000,
     gravity: 'top', // `top` or `bottom`
     position: 'left', // `left`, `center` or `right`
-    backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
     stopOnFocus: true, // Prevents dismissing of toast on hover
-    className: 'info',
+    className: 'info info-success',
     offset: {
       x: 305, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
       y: 17, // vertical axis - can be a number or a string indicating unity. eg: '2em'
@@ -32,9 +31,8 @@ function onFetchMore(more) {
     duration: 2000,
     gravity: 'top', // `top` or `bottom`
     position: 'left', // `left`, `center` or `right`
-    backgroundColor: 'linear-gradient(to right, #ff7e5f, #feb47b)',
     stopOnFocus: true, // Prevents dismissing of toast on hover
-    className: 'info',
+    className: 'info info-more',
     offset: {
       x: 305, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
       y: 17, // vertical axis - can be a number or a string indicating unity. eg: '2em'
@@ -53,9 +51,8 @@ function onFetchError() {
     duration: 2000,
     gravity: 'top', // `top` or `bottom`
     position: 'left', // `left`, `center` or `right`
-    backgroundColor: 'linear-gradient(to right, #fd1d1d, #fcb045)',
     stopOnFocus: true, // Prevents dismissing of toast on hover
-    className: 'info',
+    className: 'info info-error',
     offset: {
       x: 305, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
       y: 107, // vertical axis - can be a number or a string indicating unity. eg: '2em'
